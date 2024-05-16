@@ -177,18 +177,20 @@ class ErrorMessageResolver
     }
 
     /**
-     * Get error message for the given key.
+     * Get the error message for the given key.
      *
      * @param string $key The key to retrieve the error message for.
      *
-     * @return string The error message corresponding to the key, or "Unknown error" if key not found.
+     * @return string A JSON encoded string containing the key and the corresponding error message.
+     *                If the key is not found, the message will be "Unknown error".
      */
     public function getErrorMessage($key)
     {
         if (array_key_exists($key, $this->errorMessages)) {
-            return $this->errorMessages[$key];
+            return json_encode(array('key' => $key, 'msg' => $this->errorMessages[$key]));
         } else {
-            return "Unknown error";
+            return json_encode(array('key' => $key, 'msg' => "Unknown error"));
         }
     }
+
 }
