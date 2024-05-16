@@ -1,0 +1,21 @@
+{
+    "name": "stanleysie/hk-error",
+    "description": "Handling error returns.",
+    "type": "library",
+    "require": {
+        "php": "^7.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Stanleysie\\HkError\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stanley Sie",
+            "email": "swookon@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

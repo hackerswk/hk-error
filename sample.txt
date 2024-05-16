@@ -1,0 +1,14 @@
+// Example usage
+$errorMessages = [
+    'ERR001' => 'Invalid username',
+    'ERR002' => 'Invalid password',
+    // Add more error messages...
+];
+
+$resolver = new ErrorMessageResolver($errorMessages);
+
+// Get the error message for key 'ERR001'
+echo $resolver->getErrorMessage('ERR001'); // Outputs: Invalid username
+
+// Get the error message for a non-existent key
+echo $resolver->getErrorMessage('ERR999'); // Outputs: Unknown error
