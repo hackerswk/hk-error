@@ -189,6 +189,7 @@ class ErrorMessageResolver
                 "ERR154" => "無法移除連結網域",
                 "ERR155" => "無法更新網站 lookup file",
                 "ERR156" => "無法產生行銷工具 template",
+                "ERR157" => "無法新增使用者取消續訂回饋",
             ];
         }
     }
